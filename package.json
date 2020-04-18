@@ -1,0 +1,22 @@
+{
+  "name": "my-portfolio",
+  "version": "2.0.0",
+  "description": "My portfolio V-2.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohanmudliar/rohanmudliar-2.0.0.git"
+  },
+  "author": "Rohan Mudliar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohanmudliar/rohanmudliar-2.0.0/issues"
+  },
+  "homepage": "https://github.com/rohanmudliar/rohanmudliar-2.0.0#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
