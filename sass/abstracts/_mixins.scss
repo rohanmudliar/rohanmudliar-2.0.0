@@ -1,0 +1,32 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/* Media Query Manager
+0-600px    : Phone
+600-900px  : Tablet Portrait
+900-1200   : Tablet Landscape
+1200-1800  : Normal Desktop
+1800px +   : Big Desktop
+*/
+
+
+// 1em = 16px
+@mixin respond($_prop) {
+    @if ($_prop == phone) {
+        @media only screen and (max-width: 37.5em) { @content };
+    }
+    @if ($_prop == tabPort) {
+        @media only screen and (max-width: 56.25em) { @content };
+    }
+    @if ($_prop == tabLand) {
+        @media only screen and (max-width: 75em) { @content };
+    }
+    @if ($_prop == bigDesktop) {
+        @media only screen and (min-width: 112.5em) { @content };
+    }
+}
