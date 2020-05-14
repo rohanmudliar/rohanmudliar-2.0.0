@@ -1,6 +1,5 @@
 .section__about {
     padding: 10rem 5rem;
-    // background-color: red;
     height: 100vh;
     width: 100%;
     display: grid;
@@ -8,24 +7,16 @@
     gap: 2rem;
     justify-content: center;
     color: $color-black;
-    // background: url('./../../images/bg_canvas-dark.jpg');
-    // color: $color-white;
 
     &-img {
-        // background-color: yellow;
         height: 60vh;
         justify-self: center;
     }
 
     &-img img {
         height: 100%;
-        // outline-offset: 2rem;
         box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .4);
     }
-
-    // &-img img:hover {
-    //     outline: 1.5rem solid $color-black;
-    // }
 
     &-description {
         width: 80%;
@@ -38,20 +29,15 @@
     }
 }
         
-
 .section__about-description {
     display: grid;
-    // grid-template-rows: repeat(3, 1fr);
-    // gap: 2rem;
 }
 
 .description__header {
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
-
 .about__description {
-    // background-color: gray;
     font-size: 2rem;
 
     & > * {
@@ -60,7 +46,6 @@
 }
 
 .about__currentSong {
-    // background-color: red;
     font-size: 1.4rem;
 
     &-heading {
