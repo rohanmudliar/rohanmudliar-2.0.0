@@ -1,0 +1,79 @@
+.navBar {
+    position: absolute;
+    background-color: rgba(36, 36, 36, 0.6);
+    height: auto;
+    padding: 2rem;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid gray;
+
+    &__logo-box {
+        margin-right: auto;;
+        background-color: $color-black;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        // box-shadow: .2rem .2rem .5rem .5rem #2b2b2b;
+
+        &:hover > .navBar__logo {
+            cursor: pointer;
+            transform: scale(1);
+        }
+
+        &:active  > .navBar__logo {
+            transform: scale(.9);
+        }
+    }
+
+    &__logo {
+        height: 100%;
+        transform: scale(.9);
+        transition: transform .2s;
+    }
+
+    &__links {
+        list-style: none;
+    }
+
+    &__links li {
+        display: inline-block;
+        padding: 0px 2rem;
+        margin-right: 2rem;
+    }
+
+    &__links li a {
+        display: block;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+        padding-bottom: .5rem;
+        transition: all .3s ease 0s;
+        overflow: hidden;
+    }
+
+    &__links li a:hover {
+        color: $color-primary;
+        cursor: pointer;
+    }
+
+    &__links li a::after{
+        content: '';
+        display: block;
+        margin-top: 5px;
+        width: 0%;
+        height: 2px;
+        background: $color-primary;
+        transition: width .3s;
+    }
+
+    &__links li a:hover::after{
+        width: 100%;
+    }
+}

@@ -5,32 +5,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="./sass/main.css">
 </head>
 
 <body>
+    <!-- <div class="navBar">
+        <div class="navBar__logo-box">
+            <img src="./images/logo.png" class="navBar__logo" alt="logo">
+        </div>
+        <nav>
+            <ul class="navBar__links">
+                <li><a href="">home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">work</a></li>
+                <li><a href="">testimonials</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </nav>
+    </div> -->
     <header class="header">
         <div class="header__logo-box">
-            <img src="" class="header__logo" alt="logo">
+            <img src="./images/logo.png" class="header__logo" alt="logo">
         </div>
 
         <div class="header__text-box">
             <h1 class="heading-primary">
                 <span class="heading-primary--main">
-
+                    Hi, I'm Rohan
                 </span>
                 <span class="heading-primary--sub">
-
+                    I am a developer.
                 </span>
             </h1>
-            <a href="#" class="btn"></a>
-            <a href="#" class="btn"></a>
+        </div>
+
+        <div class="header__socialDiv">
+            <a href="https://www.linkedin.com/in/rohanmudliar/" target="_blank">
+                <svg class="header__socialDiv-linkedin">
+                    <use xlink:href="./images/sprite.svg#icon-linkedin"></use>
+                </svg>
+            </a>
+            <a href="https://github.com/rohanmudliar/" target="_blank">
+                <svg class="header__socialDiv-github">
+                    <use xlink:href="./images/sprite.svg#icon-github"></use>
+                </svg>
+            </a>
+            <a href="skype:rohan.mudliar1?userinfo">
+                <svg class="header__socialDiv-skype">
+                    <use xlink:href="./images/sprite.svg#icon-skype"></use>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/rohanmudliar/" target="_blank">
+                <svg class="header__socialDiv-instagram">
+                    <use xlink:href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+            </a>
         </div>
     </header>
 
     <main>
-        <section class="section-about">
+        <section class="section__about">
+            <div class="section__about-img">
+                <img class="about-img" src="./images/aboutMe.jpg" alt="Rohan" />
+            </div>
+            <div class="section__about-description">
+                <div class="description__header">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about__description">
+                    <p class="about__description-first">
+                        I'm a Web developer with 1 year of experience.
+                    </p>
+                    <p class="about__description-second">
+                        Well-organized person, problem solver, independent employee with attention to details. Fan of
+                        Bar&ccedil;a, outdoor activities, Tv series and recently reading books.
+                    </p>
+                    <p class="about__description-third">
+                        Interested in the entire front-end spectrum & working on ambitious projects with positive
+                        people.
+                    </p>
+                </div>
 
+                <div class="about__currentSong">
+                    <p class="about__currentSong-heading">
+                        Currently Listening To:
+                    </p>
+                    <div class="about__currentSong-info">
+                        <div class="about__currentSong-visualizer">
+                            <img src="./images/eq.gif" alt="equilizer" />
+                        </div>
+                        <div class="about__currentSong-songName">
+                            <p>Mahi Ve</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section__about-knowMore">
+                <a href="#" class="about__knowmMore-link"><button class="about__knowMore-button">Know
+                        more?</button></a>
+            </div>
+        </section>
+
+
+        <section class="section__work">
+            <div class="section__work-heading">
+                <h2>My Work</h2>
+            </div>
+            <div class="section__work-first">
+                <div class="work__first-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil amet ipsum fuga nulla dolore
+                    excepturi placeat error labore iusto esse. Harum soluta repudiandae maxime dolores repellat quidem
+                    voluptatem nulla eaque labore iusto esse. Harum soluta repudiandae maxime dolores repellat quidem
+                    voluptatem nulla eaque.
+                </div>
+                <div class="work__first-image">
+                    <img src="./images/musicPlayer.png" alt="" />
+                </div>
+            </div>
+            <div class="section__work-second">
+                <div class="work__second-image">
+                    <img src="./images/extension.png" alt="" />
+                </div>
+                <div class="work__second-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil amet ipsum fuga nulla dolore
+                    excepturi placeat error labore iusto esse. Harum soluta repudiandae maxime dolores repellat quidem
+                    voluptatem nulla eaque labore iusto esse. Harum soluta repudiandae maxime dolores repellat quidem
+                    voluptatem nulla eaque.
+                </div>
+            </div>
+            <div class="section__work-third">
+                <div class="work__third-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil amet ipsum fuga nulla dolore
+                    excepturi placeat error labore iusto esse. Harum soluta repudiandae maxime dolores repellat quidem
+                    voluptatem nulla eaque labore iusto esse. Harum soluta repudiandae maxime dolores repellat quidem
+                    voluptatem nulla eaque.
+                </div>
+                <div class="work__third-image">
+                    <img src="./images/pokemon.png" alt="" />
+                </div>
+            </div>
         </section>
     </main>
 

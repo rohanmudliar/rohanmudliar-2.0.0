@@ -1,0 +1,183 @@
+/* Media Query Manager
+0-600px    : Phone
+600-900px  : Tablet Portrait
+900-1200   : Tablet Landscape
+1200-1800  : Normal Desktop
+1800px +   : Big Desktop
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Noto Sans JP', sans-serif;
+  height: 200vh; }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box;
+  position: relative; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.u-center-text {
+  text-align: center; }
+
+.nav-a-hover {
+  border-bottom: 2px solid #0068FF; }
+
+.navBar {
+  position: absolute;
+  background-color: rgba(36, 36, 36, 0.6);
+  height: auto;
+  padding: 2rem;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid gray; }
+  .navBar__logo-box {
+    margin-right: auto;
+    background-color: #121924;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%; }
+    .navBar__logo-box:hover > .navBar__logo {
+      cursor: pointer;
+      transform: scale(1); }
+    .navBar__logo-box:active > .navBar__logo {
+      transform: scale(0.9); }
+  .navBar__logo {
+    height: 100%;
+    transform: scale(0.9);
+    transition: transform .2s; }
+  .navBar__links {
+    list-style: none; }
+  .navBar__links li {
+    display: inline-block;
+    padding: 0px 2rem;
+    margin-right: 2rem; }
+  .navBar__links li a {
+    display: block;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    padding-bottom: .5rem;
+    transition: all .3s ease 0s;
+    overflow: hidden; }
+  .navBar__links li a:hover {
+    color: #0068FF;
+    cursor: pointer; }
+  .navBar__links li a::after {
+    content: '';
+    display: block;
+    margin-top: 5px;
+    width: 0%;
+    height: 2px;
+    background: #0068FF;
+    transition: width .3s; }
+  .navBar__links li a:hover::after {
+    width: 100%; }
+
+.btn {
+  background-color: red; }
+
+.header {
+  height: 100vh;
+  background: linear-gradient(105deg, #f3f3f3 0%, #f3f3f3 50%, rgba(0, 0, 0, 0.8) 50%), url("./../../images/landingPage.png");
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+  .header__logo-box {
+    background-color: #121924;
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border-radius: 50%; }
+    .header__logo-box:hover > .header__logo {
+      cursor: pointer;
+      transform: scale(1); }
+    .header__logo-box:active > .header__logo {
+      transform: scale(0.9); }
+  .header__logo {
+    height: 100%;
+    transform: scale(0.9);
+    transition: transform .2s; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    mix-blend-mode: difference; }
+  .header__socialDiv {
+    padding: 1rem;
+    background-color: #f3f3f3;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 6rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem; }
+  .header__socialDiv a {
+    height: 3rem;
+    width: 100%; }
+  .header__socialDiv a svg {
+    height: 100%;
+    width: 100%; }
+
+.heading-primary {
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    font-size: 8rem;
+    display: block;
+    letter-spacing: 0.1rem;
+    animation: moveInLeft .5s ease-out; }
+  .heading-primary--sub {
+    font-size: 5rem;
+    display: block;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    animation: fadeIn .5s ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: backwards; }
+
+.section__about {
+  background-color: yellow;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }

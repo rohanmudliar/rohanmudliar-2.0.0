@@ -1,3 +1,100 @@
-.section-about {
-    
+.header {
+    height: 100vh;
+    background:linear-gradient(105deg, $color-white 0%, $color-white 50%, rgba(0, 0, 0, 0.8) 50%), url('./../../images/landingPage.png');
+    position: relative;
+    top: 0;
+    left: 0;
+    // clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    // background-attachment: fixed;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    &__logo-box {
+        background-color: $color-black;
+        width: 8rem;
+        height: 8rem;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        border-radius: 50%;
+        // box-shadow: .2rem .2rem .5rem .5rem #2b2b2b;
+
+        &:hover > .header__logo {
+            cursor: pointer;
+            transform: scale(1);
+        }
+
+        &:active  > .header__logo{
+            transform: scale(.9);;
+        }
+    }
+
+    &__logo {
+        height: 100%;
+        transform: scale(.9);
+        transition: transform .2s;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        color: white; 
+        mix-blend-mode: difference;
+    }
+
+    &__socialDiv {
+        padding: 1rem;
+        background-color: $color-white;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width:6rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+
+        // &-linkedin {
+        //     fill: #007bb5;
+        // }
+
+        // &-instagram {
+        //     fill: #e95950;
+        // }
+    }
+
+    &__socialDiv a {
+        height: 3rem;
+        width: 100%;
+    }
+
+    &__socialDiv a svg {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.heading-primary {
+     backface-visibility: hidden;
+
+    &--main {
+        font-size: 8rem;
+        display: block;
+        letter-spacing: 0.1rem;
+        animation: moveInLeft .5s ease-out;
+    }
+
+    &--sub {
+        font-size: 5rem;
+        display: block;
+        font-weight: lighter;
+        letter-spacing: 0.1rem;
+        animation: fadeIn .5s ease-out;
+        animation-delay: 1s;
+        animation-fill-mode: backwards;
+    }
 }
