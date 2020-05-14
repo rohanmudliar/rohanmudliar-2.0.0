@@ -1,0 +1,94 @@
+.section__project {
+    padding: 10rem 0 7rem 0;
+    background-color: $color-white;
+    display: grid;
+
+    &-heading {
+        font-size: 3.5rem;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-more {
+        margin-top: 5rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.section__project-first  {
+    margin: 5rem 0 0 0;
+    background-color: #7d5fff;
+}
+
+.section__project-second {
+    background-color: #F79F1F;
+}
+
+.section__project-third {
+    background-color: #000000;
+    color: $color-white;
+}
+
+.section__project-first,
+.section__project-second,
+.section__project-third  {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 80vh;
+    align-items: center;
+}
+
+.project__first-description,
+.project__second-description,
+.project__third-description {
+    width: 70%;
+    justify-self: center;
+}
+
+.project__first-title,
+.project__second-title,
+.project__third-title {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 3rem;
+}
+
+.project__first-body,
+.project__second-body,
+.project__third-body {
+    font-size: 2rem;
+}
+
+.project__first-image,
+.project__second-image,
+.project__third-image  {
+    width: 70%;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.project__more-button {
+    background-color: transparent;
+    border: none;
+    padding:1rem 2rem;
+    font-size: 2rem;
+    border: 2px solid $color-primary;
+    border-radius: .7rem;
+    box-shadow: 5px 5px 16px 3px rgba(125,125,125,1);
+    transform: translateY(0) scale(.95);
+    transition: all .3s;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 5px 10px 20px 3px rgba(125,125,125,1);
+        transform: translateY(-1rem) scale(1);
+    }
+}
