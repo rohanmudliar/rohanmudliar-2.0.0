@@ -516,4 +516,82 @@ body {
   -webkit-transform: translateY(-1rem) scale(1);
           transform: translateY(-1rem) scale(1);
 }
+
+.section__testimonials {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../../images/corporatebackground.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/corporatebackground.jpg");
+  color: #f3f3f3;
+  background-attachment: fixed;
+  padding: 7rem 10rem;
+  display: -ms-grid;
+  display: grid;
+}
+
+.section__testimonials-heading {
+  font-size: 3.5rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__testimonials-body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.section__testimonials-first, .section__testimonials-second {
+  width: 70%;
+  padding-top: 2rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  display: -ms-grid;
+  display: grid;
+}
+
+.section__testimonials-first blockquote:before,
+.section__testimonials-second blockquote:before {
+  content: "\201C";
+  display: block;
+  font-size: 7rem;
+  position: absolute;
+  left: -5%;
+  top: -5%;
+}
+
+.section__testimonials-first blockquote,
+.section__testimonials-second blockquote {
+  margin-top: 12%;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 2.5rem;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.section__testimonials-first cite,
+.section__testimonials-second cite {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  display: block;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.section__testimonials-first cite img,
+.section__testimonials-second cite img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 2rem;
+}
 /*# sourceMappingURL=main.css.map */

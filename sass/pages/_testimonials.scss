@@ -1,0 +1,65 @@
+.section__testimonials {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../../images/corporatebackground.jpg');
+    color: $color-white;
+    background-attachment: fixed;
+    padding: 7rem 10rem;
+    display: grid;
+    
+    &-heading {
+        font-size: 3.5rem;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    &-first,
+    &-second {
+        width: 70%;
+        padding-top: 2rem;
+        justify-self: center;
+        display: grid;
+    }
+
+    &-first blockquote:before,
+    &-second blockquote:before {
+        content: "\201C";
+        display: block;
+        font-size: 7rem;
+        position: absolute;
+        left: -5%;
+        top: -5%;
+    }
+    
+    &-first blockquote,
+    &-second blockquote {
+        margin-top: 12%;
+        font-size: 1.5rem;
+        font-style: italic;
+        line-height: 2.5rem;
+        padding: 1.5rem;
+        position: relative;
+    }
+
+    &-first cite,
+    &-second cite  {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        display: block;
+        align-self: end;
+    }
+    
+    &-first cite img,
+    &-second cite img {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 2rem;
+    }
+}
