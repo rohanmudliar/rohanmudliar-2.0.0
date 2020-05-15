@@ -77,18 +77,14 @@
 
 .project__more-button {
     background-color: transparent;
+    text-transform: uppercase;
     border: none;
-    padding:1rem 2rem;
+    padding: 1.5rem 3rem;
     font-size: 2rem;
-    border: 2px solid $color-primary;
+    border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: .7rem;
-    box-shadow: 5px 5px 16px 3px rgba(125,125,125,1);
-    transform: translateY(0) scale(.95);
-    transition: all .3s;
 
     &:hover {
         cursor: pointer;
-        box-shadow: 5px 10px 20px 3px rgba(125,125,125,1);
-        transform: translateY(-1rem) scale(1);
     }
 }
