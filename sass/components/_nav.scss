@@ -1,16 +1,17 @@
 .navBar {
-    position: absolute;
-    background-color: rgba(36, 36, 36, 0.6);
+    position: fixed;
+    background-color: rgba(36, 36, 36, 1);
     height: auto;
-    padding: 2rem;
+    padding: 1rem 1.5rem 1rem 6rem;
     top: 0;
     left: 0;
     z-index: 9999;
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: baseline;
     border-bottom: 1px solid gray;
+    transition: all .3s;
 
     &__logo-box {
         margin-right: auto;;
@@ -18,14 +19,14 @@
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
-        // box-shadow: .2rem .2rem .5rem .5rem #2b2b2b;
+        box-shadow: .2rem .2rem .5rem .5rem #3b3b3b;
 
-        &:hover > .navBar__logo {
+        &:hover .navBar__logo {
             cursor: pointer;
             transform: scale(1);
         }
 
-        &:active  > .navBar__logo {
+        &:active .navBar__logo {
             transform: scale(.9);
         }
     }
@@ -33,7 +34,7 @@
     &__logo {
         height: 100%;
         transform: scale(.9);
-        transition: transform .2s;
+        transition: all .2s;
     }
 
     &__links {

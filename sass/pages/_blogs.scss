@@ -1,6 +1,6 @@
 .section__blogs {
     padding: 7rem 10rem;
-    background-color: $color-white;
+    // background-color: $color-white;
     display: grid;
 
     &-heading {
@@ -8,13 +8,23 @@
         display: grid;
         justify-content: center;
         align-items: center;
+        padding-bottom: 6rem;
+
+        & h1:after {
+            content: " ";
+            display: block;
+            background-color: $color-primary;
+            text-align: center;
+            height: 2px;
+            width: 100px;
+            margin: 1.5rem auto 0;
+        }
     }
 
     &-body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 5rem;
-        padding-top: 6rem;
     }
 
     &-blogCard {
@@ -52,8 +62,8 @@
     background-color: transparent;
     text-transform: uppercase;
     border: none;
-    padding: 1.5rem 3rem;
-    font-size: 2rem;
+    padding: 1.5rem 3.5rem;
+    font-size: 1.5rem;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: .7rem;
 

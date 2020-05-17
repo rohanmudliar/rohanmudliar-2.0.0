@@ -1,0 +1,106 @@
+.section__contact {
+    // padding: 7rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: url('/images/bg_canvas-dark.jpg');
+    color: $color-white;
+
+    &-heading {
+        font-size: 3.5rem;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 6rem;
+
+        & h1:after {
+            content: " ";
+            display: block;
+            background-color: $color-primary;
+            text-align: center;
+            height: 2px;
+            width: 100px;
+            margin: 1.5rem auto 0;
+        }
+    }
+
+    &-body {
+        padding: 4rem;
+
+        &Description {
+            justify-self: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        &Form {
+            justify-self: center;
+            text-align: right;
+            
+
+            & input:nth-child(1),
+            & input:nth-child(2),
+            & input:nth-child(3),
+            .contactTextArea {
+                margin-bottom: 2rem;
+                border: none;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 1rem;
+                color: white; 
+                border-bottom: 2px solid transparent;
+
+                &:focus {
+                    outline: none;
+                    border-bottom: 2px solid green
+                }
+
+                &:focus:invalid {
+                    border-bottom: 2px solid red;
+                }
+            }
+
+            & input:nth-child(1) {
+                margin-right: 2rem;
+            }
+            
+            & input:nth-child(1),
+            & input:nth-child(2) {
+                width: 48%;
+                height: 4rem;
+            }
+
+            & input:nth-child(3),
+            .contactTextArea {
+                width: 100%;
+            }
+
+            & input:nth-child(3) {
+                height: 4rem;
+            }
+
+            .contactTextArea {
+                height: 15rem;
+                resize: none;
+            }
+
+            & input:nth-child(5) {
+                margin: 0 auto;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: $color-white;
+                text-transform: uppercase;
+                border: none;
+                padding: 1rem 2rem;
+                font-size: 1.2rem;
+                border: 2px solid rgba(0, 0, 0, 0.5);
+                border-radius: .7rem;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

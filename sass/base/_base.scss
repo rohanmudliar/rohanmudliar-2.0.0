@@ -10,6 +10,7 @@ html {
     font-size: 62.5%; // 10/16
     // font-family: 'Montserrat', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
+    scroll-behavior: smooth;
 
     @include respond(phone) {
         font-size: 50%;
@@ -27,3 +28,23 @@ body {
 //     background-color: $color-primary;
 //     color: white;
 // }
+
+.hidden {
+    display: none !important;
+}
+
+.js--wp-0,
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0;
+    transition-duration: .7s;
+}
+
+.js--wp-0.animated,
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+    transition-duration: .7s;
+}

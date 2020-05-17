@@ -1,11 +1,10 @@
 .header {
     height: 100vh;
-    background:linear-gradient(105deg, $color-white 0%, $color-white 50%, rgba(0, 0, 0, 0.8) 50%), url('./../../images/landingPage.png');
+    background:linear-gradient(105deg, $color-white 0%, $color-white 50%, rgba(0, 0, 0, 0.5) 50%), url('./../../images/landingPage.png');
     position: relative;
     top: 0;
     left: 0;
     // clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-    // background-attachment: fixed;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
@@ -75,6 +74,10 @@
     &__socialDiv a svg {
         height: 100%;
         width: 100%;
+
+        &:hover {
+            fill: $color-primary;
+        }
     }
 }
 

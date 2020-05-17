@@ -10,6 +10,16 @@
         display: grid;
         justify-content: center;
         align-items: center;
+
+        & h1:after {
+            content: " ";
+            display: block;
+            background-color: $color-primary;
+            text-align: center;
+            height: 2px;
+            width: 100px;
+            margin: 1.5rem auto 0;
+        }
     }
 
     &-body {

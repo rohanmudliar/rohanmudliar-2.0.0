@@ -29,12 +29,27 @@
     }
 }
         
+.fadeIn {
+     animation: fadeIn .7s ease-out;
+}
+
 .section__about-description {
     display: grid;
 }
 
-.description__header {
-    font-size: 3.5rem;
+.description__header h1 {
+    font-size: 4rem;
+    display: inline-block;
+
+    &:after {
+        content: " ";
+        display: block;
+        background-color: $color-primary;
+        text-align: center;
+        height: 2px;
+        width: 100px;
+        margin: 1rem auto 0;
+    }
 }
 
 .about__description {
@@ -74,8 +89,8 @@
     background-color: transparent;
     text-transform: uppercase;
     border: none;
-    padding:1.5rem 3rem;
-    font-size: 2rem;
+    padding: 1.5rem 3.5rem;
+    font-size: 1.5rem;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: .7rem;
 

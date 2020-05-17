@@ -1,5 +1,5 @@
 .section__project {
-    padding: 10rem 0 7rem 0;
+    padding: 7rem 0 0 0;
     background-color: $color-white;
     display: grid;
 
@@ -8,6 +8,16 @@
         display: grid;
         justify-content: center;
         align-items: center;
+
+        & h1:after {
+            content: " ";
+            display: block;
+            background-color: $color-primary;
+            text-align: center;
+            height: 2px;
+            width: 100px;
+            margin: 1.5rem auto 0;
+        }
     }
 
     &-more {
@@ -39,6 +49,7 @@
     grid-template-columns: repeat(2,1fr);
     height: 80vh;
     align-items: center;
+    overflow: hidden;
 }
 
 .project__first-description,
@@ -75,12 +86,29 @@
     }
 }
 
+// .project__first-image,
+// .project__third-image  {
+//     animation: moveInRightProject 2s ease-out;
+// }
+
+// .project__second-image {
+//     animation: moveInLeftProject 2s ease-out;
+// }
+
+.moveInRightProject {
+     animation: moveInRightProject .7s ease-out;
+}
+
+.moveInLeftProject {
+    animation: moveInLeftProject .7s ease-out;
+}
+
 .project__more-button {
     background-color: transparent;
     text-transform: uppercase;
     border: none;
-    padding: 1.5rem 3rem;
-    font-size: 2rem;
+    padding: 1.5rem 3.5rem;
+    font-size: 1.5rem;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: .7rem;
 
