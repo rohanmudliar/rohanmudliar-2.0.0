@@ -1,25 +1,70 @@
 .section__about {
     padding: 10rem 5rem;
-    height: 100vh;
+    // height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 7rem;
     justify-content: center;
     color: $color-black;
 
+    @media (min-width: 768px) and (max-width: 1024px) {
+        padding: 10rem 4rem;
+        gap: 5rem;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        padding: 8rem 3rem;
+        gap: 4rem;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        padding: 8rem 1rem;
+    }
+
     &-img {
         height: 60vh;
+        max-height: 500px;
         justify-self: center;
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            width: 50%;
+            height: 100%;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            width: 80%;
+            height: 100%;
+        }
     }
 
     &-img img {
         height: 100%;
         box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .4);
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            width: 100%;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            width: 100%;
+        }
     }
 
     &-description {
         width: 80%;
+        display: grid;
+        gap: 2rem;
+        align-self: baseline;
+        justify-self: center;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            width: 90%;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            width: 100%;
+        }
     }
 
     &-knowMore {
@@ -33,13 +78,26 @@
      animation: fadeIn .7s ease-out;
 }
 
-.section__about-description {
-    display: grid;
-}
-
 .description__header h1 {
     font-size: 4rem;
     display: inline-block;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 3.5rem;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        font-size: 3rem;
+        text-align: center;
+        justify-self: center;
+        display: grid;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        text-align: center;
+        justify-self: center;
+        display: grid;
+    }
 
     &:after {
         content: " ";
@@ -55,8 +113,20 @@
 .about__description {
     font-size: 2rem;
 
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 1.7rem;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        text-align: justify;
+    }
+
     & > * {
         margin-bottom: 1rem;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            margin-bottom: .8rem;
+        }
     }
 }
 

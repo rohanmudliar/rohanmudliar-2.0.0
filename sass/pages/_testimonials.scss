@@ -1,15 +1,36 @@
 .section__testimonials {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../../images/corporatebackground.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('/images/corporatebackground.jpg');
+    background-position: center;
     color: $color-white;
     background-attachment: fixed;
-    padding: 7rem 10rem;
+    padding: 7rem 5rem;
     display: grid;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+         padding: 6rem 3rem;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+         padding: 6rem 5rem;
+    }
     
     &-heading {
         font-size: 3.5rem;
         display: grid;
         justify-content: center;
         align-items: center;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 3rem;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            font-size: 2.5rem;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            font-size: 2rem;
+        }
 
         & h1:after {
             content: " ";
@@ -24,20 +45,34 @@
 
     &-body {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 3rem;
+        margin-top: 5rem;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            gap: 2rem;
+        }
     }
 
     &-first,
-    &-second {
-        width: 70%;
+    &-second,
+    &-third {
+        width: 100%;
         padding-top: 2rem;
         justify-self: center;
         display: grid;
+        background-color: #eeeeee1c;
+        padding: 2rem;
+        border-radius: 1rem;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            padding: 2rem 1rem;
+        }
     }
 
     &-first blockquote:before,
-    &-second blockquote:before {
+    &-second blockquote:before,
+    &-third blockquote:before {
         content: "\201C";
         display: block;
         font-size: 7rem;
@@ -47,7 +82,8 @@
     }
     
     &-first blockquote,
-    &-second blockquote {
+    &-second blockquote,
+    &-third blockquote {
         margin-top: 12%;
         font-size: 1.5rem;
         font-style: italic;
@@ -57,7 +93,8 @@
     }
 
     &-first cite,
-    &-second cite  {
+    &-second cite,
+    &-third cite  {
         font-size: 1.5rem;
         margin-top: 2rem;
         display: block;
@@ -65,7 +102,8 @@
     }
     
     &-first cite img,
-    &-second cite img {
+    &-second cite img,
+    &-third cite img {
         width: 7rem;
         height: 7rem;
         border-radius: 50%;

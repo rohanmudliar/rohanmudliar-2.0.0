@@ -12,7 +12,23 @@ html {
     font-family: 'Noto Sans JP', sans-serif;
     scroll-behavior: smooth;
 
-    @include respond(phone) {
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        font-size: 59%;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 56%;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        font-size: 56%;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        font-size: 53%;  
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
         font-size: 50%;
     }
 
@@ -28,23 +44,3 @@ body {
 //     background-color: $color-primary;
 //     color: white;
 // }
-
-.hidden {
-    display: none !important;
-}
-
-.js--wp-0,
-.js--wp-1,
-.js--wp-2,
-.js--wp-3 {
-    opacity: 0;
-    transition-duration: .7s;
-}
-
-.js--wp-0.animated,
-.js--wp-1.animated,
-.js--wp-2.animated,
-.js--wp-3.animated {
-    opacity: 1;
-    transition-duration: .7s;
-}

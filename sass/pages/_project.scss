@@ -9,6 +9,18 @@
         justify-content: center;
         align-items: center;
 
+        @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 3rem;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            font-size: 2.5rem;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            font-size: 2rem;
+        }
+
         & h1:after {
             content: " ";
             display: block;
@@ -30,6 +42,14 @@
 .section__project-first  {
     margin: 5rem 0 0 0;
     background-color: #7d5fff;
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        margin: 4rem 0 0 0;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        margin: 3rem 0 0 0;
+    }
 }
 
 .section__project-second {
@@ -46,10 +66,21 @@
 .section__project-third  {
     padding: 5rem 0;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    height: 80vh;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     align-items: center;
     overflow: hidden;
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
 }
 
 .project__first-description,
@@ -57,6 +88,18 @@
 .project__third-description {
     width: 70%;
     justify-self: center;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        width: 90%;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        width: 90%;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        width: 90%;
+    }
 }
 
 .project__first-title,
@@ -65,12 +108,41 @@
     font-size: 3rem;
     font-weight: bold;
     padding-bottom: 3rem;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 2.7rem;
+        padding-bottom: 2rem;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        text-align: center;
+        font-size: 2.5rem;
+    }
 }
 
 .project__first-body,
 .project__second-body,
 .project__third-body {
     font-size: 2rem;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 1.8rem;
+    }
+}
+
+.project__second-image {
+    @media (min-width: 481px) and (max-width: 767px) {
+        grid-row: 2 / span 1;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        grid-row: 2 / span 1;
+    }
 }
 
 .project__first-image,
@@ -81,19 +153,22 @@
     justify-self: center;
     align-self: center;
 
+    @media (min-width: 768px) and (max-width: 1024px) {
+        width: 90%;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        width: 70%;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        width: 80%;
+    }
+
     & img {
         width: 100%;
     }
 }
-
-// .project__first-image,
-// .project__third-image  {
-//     animation: moveInRightProject 2s ease-out;
-// }
-
-// .project__second-image {
-//     animation: moveInLeftProject 2s ease-out;
-// }
 
 .moveInRightProject {
      animation: moveInRightProject .7s ease-out;
