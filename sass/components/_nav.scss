@@ -5,13 +5,25 @@
     padding: 1rem 1.5rem 1rem 6rem;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 99999;
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
     border-bottom: 1px solid gray;
     transition: all .3s;
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        & {
+            align-items: center;
+        }
+    }
+    
+    @media (min-width: 320px) and (max-width: 480px) {
+        & {
+            align-items: center;
+        }
+    }
 
     &__logo-box {
         margin-right: auto;;
@@ -20,6 +32,7 @@
         height: 5rem;
         border-radius: 50%;
         box-shadow: .2rem .2rem .5rem .5rem #3b3b3b;
+        z-index: 999999;
 
         &:hover .navBar__logo {
             cursor: pointer;
@@ -39,50 +52,161 @@
 
     &__links {
         list-style: none;
-    }
 
-    &__links li {
-        display: inline-block;
-        padding: 0px 2rem;
-        margin-right: 2rem;
-
-    }
+        & li {
+            display: inline-block;
+            padding: 0px 2rem;
+            margin-right: 2rem;
     
-    @media (min-width: 768px) and (max-width: 1024px) {
-        &__links li {
-            margin-right: 0rem;
+            @media (min-width: 768px) and (max-width: 1024px) {
+                & {
+                    margin-right: 0rem;
+                }
+            }
+    
+            @media (min-width: 481px) and (max-width: 767px) {
+                & {
+                    display: none !important;
+                }
+            }
+    
+            @media (min-width: 320px) and (max-width: 480px) {
+                & {
+                    display: none !important;
+                }
+            }
+
+            & a {
+                display: block;
+                font-size: 1.7rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: white;
+                font-weight: bolder;
+                padding-bottom: .5rem;
+                transition: all .3s ease 0s;
+                overflow: hidden;
+
+                &:hover {
+                    color: $color-primary;
+                    cursor: pointer;
+                }
+            
+                &::after{
+                    content: '';
+                    display: block;
+                    margin-top: 5px;
+                    width: 0%;
+                    height: 2px;
+                    background: $color-primary;
+                    transition: width .3s;
+                }
+            
+                &:hover::after{
+                    width: 100%;
+                }
+            }
+        }
+
+        &-icon {
+            position: relative;
+            display: none;
+            float: left;
+            width: 50px;
+            height: 66px;
+            cursor: pointer;
+
+            @media (min-width: 481px) and (max-width: 767px) {
+                & {
+                    display: block;
+                }
+            }
+
+            @media (min-width: 320px) and (max-width: 480px) {
+                & {
+                    display: block;
+                }
+            }
+        }
+        
+        &-icon:after {
+        content: "";
+            position: absolute;
+            display: block;
+            width: 2rem;
+            height: 0;
+            top: 16px;
+            left: 15px;
+            box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
         }
     }
+}
 
-    &__links li a {
-        display: block;
-        font-size: 1.7rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        font-weight: bolder;
-        padding-bottom: .5rem;
-        transition: all .3s ease 0s;
-        overflow: hidden;
-    }
+.mobileNavBar {
+    height: 100vh;
+    background-color: whitesmoke;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: left .5s ease-out;
 
-    &__links li a:hover {
-        color: $color-primary;
-        cursor: pointer;
-    }
+    @media (min-width: 481px) and (max-width: 767px) {
+                & {
+                    display: grid;
+                }
+            }
+    
+            @media (min-width: 320px) and (max-width: 480px) {
+                & {
+                    display: grid;
+                }
+            }
 
-    &__links li a::after{
-        content: '';
-        display: block;
-        margin-top: 5px;
-        width: 0%;
-        height: 2px;
-        background: $color-primary;
-        transition: width .3s;
-    }
+    &__links {
+        display: grid;
+        list-style: none;
+    
+        & li {
+            padding: 1rem;
+            display: grid;
+            justify-content: center;
 
-    &__links li a:hover::after{
-        width: 100%;
+            & a {
+                font-size: 4rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-black;
+                font-weight: bolder;
+                padding-bottom: .5rem;
+                transition: all .3s ease 0s;
+                overflow: hidden;
+                display: inline-block;
+
+                &:hover {
+                    color: $color-primary;
+                    cursor: pointer;
+                }
+            
+                &::after{
+                    content: '';
+                    display: block;
+                    margin-top: 5px;
+                    width: 0%;
+                    height: 5px;
+                    background: $color-primary;
+                    transition: width .3s;
+                }
+            
+                &:hover::after{
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -92,9 +216,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    &__links li {
-        margin-right: 0rem;
-    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {

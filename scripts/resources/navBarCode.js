@@ -34,3 +34,28 @@ $('.js--wp-3').waypoint(() => {
 }, {
     offset: '50%'
 });
+
+const hamburger = document.getElementById('navBar__links-icon');
+const mobileNavBar = document.getElementById('mobileNavBar');
+const mobileNavLinks = document.querySelectorAll('#mobileNavBar li');
+const headerLogo = document.getElementById('headerLogo');
+
+mobileNavLinks.forEach(li => {
+    li.addEventListener('click', () => {
+        mobileNavBar.style.left = '100%';
+    })
+})
+
+headerLogo.addEventListener('click', function () {
+    mobileNavBar.style.left = '100%';
+})
+
+hamburger.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (mobileNavBar.getBoundingClientRect().left != 0) {
+        mobileNavBar.style.left = 0;
+    } else {
+        mobileNavBar.style.left = '100%';
+    }
+    mobileNavBar.style.paddingTop = navBar.getBoundingClientRect().height + 'px';
+})
