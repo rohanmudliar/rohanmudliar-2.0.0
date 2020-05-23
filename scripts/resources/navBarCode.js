@@ -40,10 +40,6 @@ $('.js--wp-3').waypoint(() => {
     offset: '70%'
 });
 
-headerLogo.addEventListener('click', function () {
-    mobileNavBar.style.left = '100%';
-})
-
 hamburger.addEventListener('click', (e) => {
     e.preventDefault();
     if (mobileNavBar.getBoundingClientRect().left != 0) {
@@ -72,11 +68,11 @@ $(window).on('beforeunload', function () {
 // }
 
 $('.mobileNavBar__links li a, .navBar__links li a, #headerLogo').click(function () {
+    navBar.parentElement.style.overflowY = 'auto';
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 0);
     mobileNavBar.style.left = '100%';
-    navBar.parentElement.style.overflowY = 'auto';
     hamburger.children[0].classList.remove('open')
     return false;
 });

@@ -2,8 +2,12 @@
     padding: 7rem;
     display: grid;
 
+    @media (min-width: 481px) and (max-width: 767px) {
+         padding: 8rem 7rem;
+    }
+
     @media (min-width: 320px) and (max-width: 480px) {
-        padding: 6rem 3rem;
+        padding: 8rem 3rem;
     }
 
     &-heading {

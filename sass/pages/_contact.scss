@@ -23,7 +23,15 @@
     }
 
     &-body {
-        padding: 4rem;
+        padding: 8rem;
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            padding: 8rem 4rem;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            padding: 8rem 3rem;
+        }
 
         &Description {
             justify-self: center;

@@ -3,6 +3,14 @@
     background-color: $color-white;
     display: grid;
 
+     @media (min-width: 481px) and (max-width: 767px) {
+            padding: 11rem 0 0 0;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            padding: 8rem 0 0 0;
+        }
+
     &-heading {
         font-size: 3.5rem;
         display: grid;
