@@ -31,8 +31,6 @@ html {
     @media (min-width: 320px) and (max-width: 480px) {
         font-size: 50%;
     }
-
-    height: 200vh;
 }
 
 body {
@@ -40,15 +38,15 @@ body {
     position: relative;
 }
 
-// ::selection {
-//     background-color: $color-primary;
-//     color: white;
-// }
+::selection {
+    background-color: $color-primary;
+    color: white;
+}
 
 *:focus {
-user-select: none;
-outline: none;
-outline: 0;
+    user-select: none;
+    outline: none;
+    outline: 0;
 }
 
 * {
@@ -56,4 +54,13 @@ outline: 0;
     -moz-tap-highlight-color:transparent;
     -o-tap-highlight-color:transparent;
     tap-highlight-color:transparent;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
