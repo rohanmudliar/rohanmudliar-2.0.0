@@ -12,11 +12,13 @@
 @import "components/nav";
 @import "components/btn";
 
+@import "pages/indexStyles/home";
+@import "pages/indexStyles/about";
+@import "pages/indexStyles/project";
+@import "pages/indexStyles/testimonials";
+@import "pages/indexStyles/blogs";
+@import "pages/indexStyles/contact";
+@import "pages/indexStyles/footer";
 
-@import "pages/home";
-@import "pages/about";
-@import "pages/project";
-@import "pages/testimonials";
-@import "pages/blogs";
-@import "pages/contact";
-@import "pages/footer";
+
+@import "pages/projInd/projInd";

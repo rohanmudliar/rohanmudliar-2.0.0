@@ -1070,6 +1070,11 @@ body {
   text-align: center;
 }
 
+.section__project > a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .section__project-first {
   margin: 5rem 0 0 0;
   background-color: #7d5fff;
@@ -1693,5 +1698,193 @@ footer {
   padding: 2rem;
   font-size: 2rem;
   color: #0068FF;
+}
+
+.projectNavBar {
+  position: fixed;
+  background-color: #242424;
+  height: auto;
+  padding: 1rem 1.5rem 1rem 6rem;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid gray;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .projectNavBar {
+    padding: 1rem 1.5rem 1rem 4rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .projectNavBar {
+    padding: 1rem 1.5rem 1rem 3rem;
+  }
+}
+
+.projectNavBar__logo-box {
+  margin-right: auto;
+  background-color: #121924;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  -webkit-box-shadow: .2rem .2rem .5rem .5rem #3b3b3b;
+          box-shadow: .2rem .2rem .5rem .5rem #3b3b3b;
+  z-index: 999999;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .projectNavBar__logo-box {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .projectNavBar__logo-box {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.projectNavBar__logo-box:hover .projectNavBar__logo {
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.projectNavBar__logo-box:active .projectNavBar__logo {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.projectNavBar__logo {
+  height: 100%;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.projectNavBar__links {
+  list-style: none;
+}
+
+.projectNavBar__links li {
+  display: inline-block;
+  padding: 0px 2rem;
+  margin-right: 2rem;
+}
+
+.projectNavBar__links li a {
+  display: block;
+  font-size: 5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.individualProject {
+  width: 100%;
+  height: 100%;
+}
+
+.individualProject__header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(black));
+  background: linear-gradient(180deg, #242424, black);
+  padding: 10rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.individualProject__header-desp {
+  padding-left: 8rem;
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.individualProject__header-desp--title {
+  font-size: 2rem;
+  color: white;
+  display: inline-block;
+}
+
+.individualProject__header-desp--title h1:after {
+  content: " ";
+  display: block;
+  background-color: #0068FF;
+  text-align: center;
+  height: 2px;
+  width: 40%;
+  margin: 1rem auto 0;
+}
+
+.individualProject__header-desp--metaData {
+  padding-top: 3rem;
+  color: gray;
+  font-size: 1.8rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+}
+
+.individualProject__header-desp--metaData---duration, .individualProject__header-desp--metaData---sourceLink {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (150px)[2];
+      grid-template-columns: repeat(2, 150px);
+}
+
+.individualProject__header-desp--metaData---duration p, .individualProject__header-desp--metaData---sourceLink p {
+  margin-bottom: 2rem;
+}
+
+.individualProject__header-desp--metaData---duration p:last-child, .individualProject__header-desp--metaData---sourceLink p:last-child {
+  color: #f3f3f3;
+}
+
+.individualProject__header-desp--metaData---duration p:last-child a, .individualProject__header-desp--metaData---sourceLink p:last-child a {
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+.individualProject__header-image {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  height: 30rem;
+}
+
+.individualProject__header-image img {
+  height: 100%;
+}
+
+.individualProject__body {
+  font-size: 2rem;
+  line-height: 3rem;
+  padding-left: 8rem;
+  width: 70%;
+  margin-top: 7rem;
+  color: #000000d0;
+}
+
+.individualProject__body > p {
+  margin-bottom: 3rem;
 }
 /*# sourceMappingURL=main.css.map */

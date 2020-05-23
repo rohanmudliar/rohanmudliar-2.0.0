@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Project</title>
+
+    <link rel="stylesheet" href="../../sass/main.css">
+</head>
+
+<body>
+    <div id="projectNavBar" class="projectNavBar">
+        <div class="projectNavBar__logo-box">
+            <a href="../../index.html"><img src="../../images/logo.png" class="projectNavBar__logo" alt="logo"></a>
+        </div>
+        <nav>
+            <ul class="projectNavBar__links">
+                <li><a href="../../index.html">
+                        &#8249;
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="individualProject">
+
+            <div class="individualProject__header">
+                <div class="individualProject__header-desp">
+                    <div class="individualProject__header-desp--title">
+                        <h1 dataEval="title"></h1>
+                    </div>
+                    <div class="individualProject__header-desp--metaData">
+                        <div class="individualProject__header-desp--metaData---duration">
+                            <p>Last Updated: </p>
+                            <p dataEval="lastUpdated"></p>
+                        </div>
+                        <div class="individualProject__header-desp--metaData---sourceLink">
+                            <p>Source Link:</p>
+                            <p dataEval="sourceLink"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="individualProject__header-image" dataEval="imgSrc">
+                </div>
+            </div>
+
+            <div class="individualProject__body" dataEval="bodyHtml">
+
+            </div>
+        </section>
+    </main>
+    <footer>Handcrafted with <span style="color: rgb(251, 82, 110)">❤</span> by yours truly.</footer>
+
+    <script src="../../scripts/resources/projects/musicPlayer.js"></script>
+    <script src="../../scripts/resources/projects/chromeExtension.js"></script>
+    <script src="../../scripts/resources/projects/pokeGame.js"></script>
+    <script src="../../scripts/resources/projects/navBarCode.js"></script>
+
+</body>
+
+</html>
