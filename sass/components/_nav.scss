@@ -65,17 +65,24 @@
             display: inline-block;
             padding: 0px 2rem;
             margin-right: 2rem;
+
+            @media (min-width: 768px) and (max-width: 860px) {
+                padding: 0px 0 0 2rem !important;
+            }
     
             @media (min-width: 768px) and (max-width: 1024px) {
                 margin-right: 0rem;
+                padding: 0px 2rem;
             }
     
             @media (min-width: 481px) and (max-width: 767px) {
                 display: none !important;
+                padding: 0px 2rem;
             }
     
             @media (min-width: 320px) and (max-width: 480px) {
                 display: none !important;
+                padding: 0px 2rem;
             }
 
             & a {

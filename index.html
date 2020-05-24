@@ -8,16 +8,18 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"> -->
 
 
-    <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-        crossorigin="" /> -->
+        crossorigin="" />
 
     <!-- <link rel="stylesheet" href="css/style.css">-->
     <link rel="stylesheet" href="./sass/main.css">
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
+
+    <script src="scripts/vendors/modernizr.custom.js"></script>
 </head>
 
 <body>
@@ -32,6 +34,7 @@
                 <li><a href="#section__project">project</a></li>
                 <li><a href="#section__testimonials">testimonials</a></li>
                 <li><a href="#section__blogs">blog</a></li>
+                <li><a href="#section__books">books</a></li>
                 <li><a href="#section__contact">contact</a></li>
                 <a href="#" id="navBar__links-icon" class="navBar__links-icon" id="header__icon">
                     <div id="nav-icon2">
@@ -54,6 +57,7 @@
             <li><a href="#section__project">project</a></li>
             <li><a href="#section__testimonials">testimonials</a></li>
             <li><a href="#section__blogs">blog</a></li>
+            <li><a href="#section__books">books</a></li>
             <li><a href="#section__contact">contact</a></li>
         </ul>
     </div>
@@ -94,44 +98,48 @@
     </header>
 
     <main>
-        <section id="section__about" class="section__about">
-            <div class="section__about-img">
-                <img class="about-img js--wp-0" src="./images/aboutMe.jpg" alt="Rohan" />
-            </div>
-            <div class="section__about-description">
-                <div class="description__header">
-                    <h1>About Me</h1>
+        <section id="section__about" class="section__aboutMain">
+            <div class="section__about">
+                <div class="section__about-img">
+                    <img class="about-img js--wp-0" src="./images/aboutMe.jpg" alt="Rohan" />
                 </div>
-                <div class="about__description">
-                    <p class="about__description-first">
-                        I'm a Web developer with 1 year of experience.
-                    </p>
-                    <p class="about__description-second">
-                        Well-organized person, problem solver, independent employee with attention to details. Fan of
-                        Bar&ccedil;a, outdoor activities, Tv series and recently reading books.
-                    </p>
-                    <p class="about__description-third">
-                        Interested in the entire front-end spectrum & working on ambitious projects with positive
-                        people.
-                    </p>
-                </div>
+                <div class="section__about-description">
+                    <div class="description__header">
+                        <h1>About Me</h1>
+                    </div>
+                    <div class="about__description">
+                        <p class="about__description-first">
+                            I'm a Web developer with 1 year of experience.
+                        </p>
+                        <p class="about__description-second">
+                            Well-organized person, problem solver, independent employee with attention to details. Fan
+                            of
+                            Bar&ccedil;a, outdoor activities, Tv series and recently reading books.
+                        </p>
+                        <p class="about__description-third">
+                            Interested in the entire front-end spectrum & working on ambitious projects with positive
+                            people.
+                        </p>
+                    </div>
 
-                <div class="about__currentSong">
-                    <p class="about__currentSong-heading">
-                        Currently Listening To:
-                    </p>
-                    <div class="about__currentSong-info">
-                        <div class="about__currentSong-visualizer">
-                            <img src="./images/eqcropedit.gif" alt="equilizer" />
-                        </div>
-                        <div class="about__currentSong-songName">
-                            <p>Saansein</p>
+                    <div class="about__currentSong">
+                        <p class="about__currentSong-heading">
+                            Currently Listening To:
+                        </p>
+                        <div class="about__currentSong-info">
+                            <div class="about__currentSong-visualizer">
+                                <img src="./images/eqcropedit.gif" alt="equilizer" />
+                            </div>
+                            <div class="about__currentSong-songName">
+                                <p>Saansein</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- <div class="section__about-knowMore">
-                <a href="#" class="about__knowmMore-link"><button class="about__knowMore-button">Know
+                <a href="pages/about/aboutMain.html" class="about__knowmMore-link"><button
+                        class="about__knowMore-button">Know
                         more >></button></a>
             </div> -->
         </section>
@@ -322,6 +330,97 @@
             <div class="section__blogs-more">
                 <a href="#" class="blogs__more-link"><button class="blogs__more-button">View More >></button></a>
             </div> -->
+        </section>
+
+        <section id="section__books" class="section__books">
+            <div class="section__books-heading">
+                <h1>Recent Reads</h1>
+            </div>
+            <div class="main">
+                <ul id="bk-list" class="bk-list">
+                    <li>
+                        <div class="bk-book book-1 bk-bookdefault">
+                            <div class="bk-front">
+                                <div class="bk-cover-back"></div>
+                                <div class="bk-cover">
+                                    <img style="width: 100%; height: 100%;" src="images/9789387022607.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="bk-back">
+                                <img style="width: 100%; height: 100%;" src="images/817Y96fy4WL.jpg" alt="">
+                            </div>
+                            <div class="bk-right"></div>
+                            <div class="bk-left">
+                                <h2>
+                                    <span></span>
+                                    <span>Preeti Shenoy</span>
+                                </h2>
+                            </div>
+                            <div class="bk-top"></div>
+                            <div class="bk-bottom"></div>
+                        </div>
+                        <div class="bk-info">
+                            <button class="bk-bookback">Flip</button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bk-book book-2 bk-bookdefault">
+                            <div class="bk-front">
+                                <div class="bk-cover-back"></div>
+                                <div class="bk-cover">
+                                    <img style="width: 100%; height: 100%;" src="images/32730193._SY475_.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class=" bk-back">
+                                <img style="width: 100%; height: 100%;" src="images/9788184007435_1.jpg" alt="">
+                            </div>
+                            <div class="bk-right"></div>
+                            <div class="bk-left">
+                                <h2>
+                                    <span></span>
+                                    <span>Sudeep Nagarkar</span>
+                                </h2>
+                            </div>
+                            <div class="bk-top"></div>
+                            <div class="bk-bottom"></div>
+                        </div>
+                        <div class="bk-info">
+                            <button class="bk-bookback">Flip</button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="bk-book book-3 bk-bookdefault">
+                            <div class="bk-front">
+                                <div class="bk-cover-back"></div>
+                                <div class="bk-cover">
+                                    <img style="width: 100%; height: 100%;" src="images/alchemist.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="bk-back">
+                                <img style="width: 100%; height: 100%;" src="images/alchemist-back-cover.jpg" alt="">
+                            </div>
+                            <div class="bk-right"></div>
+                            <div class="bk-left">
+                                <h2>
+                                    <span></span>
+                                    <span>A Catwork Orange</span>
+                                </h2>
+                            </div>
+                            <div class="bk-top"></div>
+                            <div class="bk-bottom"></div>
+                        </div>
+                        <div class="bk-info">
+                            <button class="bk-bookback">Flip</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section__books-more">
+                <a href="#" class="books__more-link"><button class="books__more-button">View More >></button></a>
+            </div>
         </section>
 
         <section id="section__contact" class="section__contact">
