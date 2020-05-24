@@ -1,0 +1,75 @@
+.individualNavBar {
+    position: fixed;
+    background-color: rgba(36, 36, 36, 1);
+    height: auto;
+    padding: 1rem 1.5rem 1rem 6rem;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    transition: all .3s;
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        padding: 1rem 1.5rem 1rem 4rem;
+    }
+    
+    @media (min-width: 320px) and (max-width: 480px) {
+        padding: 1rem 1.5rem 1rem 3rem;
+    }
+
+    &__logo-box {
+        margin-right: auto;;
+        background-color: $color-black;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        box-shadow: .2rem .2rem .5rem .5rem #3b3b3b;
+        z-index: 999999;
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            width: 6rem;
+            height: 6rem;
+        }
+    
+        @media (min-width: 320px) and (max-width: 480px) {
+            width:5rem;
+            height: 5rem;
+        }
+
+        &:hover .individualNavBar__logo {
+            cursor: pointer;
+            transform: scale(1);
+        }
+
+        &:active .individualNavBar__logo {
+            transform: scale(.9);
+        }
+    }
+
+    &__logo {
+        height: 100%;
+        transform: scale(.9);
+        transition: all .2s;
+    }
+
+    &__links {
+        list-style: none;
+
+        & li {
+            display: inline-block;
+            padding: 0px 2rem;
+            margin-right: 2rem;
+
+            & a {
+                display: block;
+                font-size: 5rem;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}

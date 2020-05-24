@@ -1700,7 +1700,7 @@ footer {
   color: #0068FF;
 }
 
-.projectNavBar {
+.individualNavBar {
   position: fixed;
   background-color: #242424;
   height: auto;
@@ -1724,18 +1724,18 @@ footer {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .projectNavBar {
+  .individualNavBar {
     padding: 1rem 1.5rem 1rem 4rem;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .projectNavBar {
+  .individualNavBar {
     padding: 1rem 1.5rem 1rem 3rem;
   }
 }
 
-.projectNavBar__logo-box {
+.individualNavBar__logo-box {
   margin-right: auto;
   background-color: #121924;
   width: 5rem;
@@ -1747,31 +1747,31 @@ footer {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .projectNavBar__logo-box {
+  .individualNavBar__logo-box {
     width: 6rem;
     height: 6rem;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .projectNavBar__logo-box {
+  .individualNavBar__logo-box {
     width: 5rem;
     height: 5rem;
   }
 }
 
-.projectNavBar__logo-box:hover .projectNavBar__logo {
+.individualNavBar__logo-box:hover .individualNavBar__logo {
   cursor: pointer;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.projectNavBar__logo-box:active .projectNavBar__logo {
+.individualNavBar__logo-box:active .individualNavBar__logo {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
-.projectNavBar__logo {
+.individualNavBar__logo {
   height: 100%;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
@@ -1779,17 +1779,17 @@ footer {
   transition: all .2s;
 }
 
-.projectNavBar__links {
+.individualNavBar__links {
   list-style: none;
 }
 
-.projectNavBar__links li {
+.individualNavBar__links li {
   display: inline-block;
   padding: 0px 2rem;
   margin-right: 2rem;
 }
 
-.projectNavBar__links li a {
+.individualNavBar__links li a {
   display: block;
   font-size: 5rem;
   text-decoration: none;
@@ -1981,6 +1981,84 @@ footer {
 
 @media (min-width: 320px) and (max-width: 480px) {
   .individualProject__body > p {
+    margin-bottom: 2rem;
+  }
+}
+
+.individualBlog {
+  width: 100%;
+  height: 100%;
+  padding: 10rem 0;
+  text-align: center;
+}
+
+.individualBlog__heading {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.individualBlog__img {
+  margin-bottom: 2rem;
+  height: 50rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .individualBlog__img {
+    height: 40rem;
+  }
+}
+
+.individualBlog__img img {
+  height: 100%;
+}
+
+.individualBlog__updatedOn {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.individualBlog__body {
+  font-size: 2rem;
+  line-height: 3rem;
+  width: 70%;
+  color: #000000d0;
+  margin: 0 auto;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .individualBlog__body {
+    width: 90%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .individualBlog__body {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    width: 90%;
+  }
+}
+
+.individualBlog__body > p {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .individualBlog__body > p {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .individualBlog__body > p {
     margin-bottom: 2rem;
   }
 }

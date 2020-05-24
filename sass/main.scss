@@ -2,8 +2,6 @@
 @import "abstracts/functions";
 @import "abstracts/mixins";
 
-
-
 @import "base/base";
 @import "base/animations";
 @import "base/tyography";
@@ -19,6 +17,8 @@
 @import "pages/indexStyles/blogs";
 @import "pages/indexStyles/contact";
 @import "pages/indexStyles/footer";
+@import "pages/indexStyles/individualNavBar";
 
 
 @import "pages/projInd/projInd";
+@import "pages/blogsInd/blogInd";

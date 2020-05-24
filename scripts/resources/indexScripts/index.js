@@ -44,4 +44,4 @@ projects.forEach(project => {
         else if (e.currentTarget.className.split('-')[1] == 'third')
             window.localStorage.setItem('currentProject', 'pokeGame');
     })
-})
+});
