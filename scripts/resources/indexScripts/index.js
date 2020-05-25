@@ -1,9 +1,9 @@
 var projects = document.querySelectorAll('#section__project > a > div')
 
-$(window).on('beforeunload', function () {
-    $('body').hide();
-    $(window).scrollTop(0, 0);
-});
+// $(window).on('beforeunload', function () {
+//     $('body').hide();
+//     $(window).scrollTop(0, 0);
+// });
 
 // if (performance.navigation.type == 1) {
 //     console.info("This page is reloaded");

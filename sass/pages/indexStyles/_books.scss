@@ -55,6 +55,10 @@
 	z-index: 1;
 	-webkit-perspective: 1800px;
 	perspective: 1800px;
+
+	@media (min-width: 320px) and (max-width: 480px) {
+        width: 200px;
+    }
 }
 
 .bk-info {
@@ -67,10 +71,8 @@
     }
 
     @media (min-width: 320px) and (max-width: 480px) {
-        margin-top: 420px;
+        margin-top: 320px;
     }
-
-
 }
 
 .bk-info button {
@@ -108,11 +110,15 @@
 	transform-style: preserve-3d;
 	-webkit-transition: -webkit-transform .5s;
 	transition: transform .5s;
+
+	@media (min-width: 320px) and (max-width: 480px) {
+        height: 300px;
+    }
 }
 
-.bk-list li .bk-book:hover {
-    cursor: pointer;
-}
+// .bk-list li .bk-book:hover {
+//     cursor: pointer;
+// }
 
 .bk-list li .bk-book.bk-bookdefault:hover {
 	-webkit-transform: rotate3d(0,1,0,35deg);
@@ -150,6 +156,11 @@
 .bk-list li .bk-front > div {
 	width: 300px;
 	height: 400px;
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		width: 200px;
+        height: 300px;
+    }
 }
 
 .bk-list li .bk-left,
@@ -188,12 +199,20 @@
 	transform: rotate3d(0,1,0,90deg) translate3d(0,0,295px);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+
+	@media (min-width: 320px) and (max-width: 480px) {
+        height: 290px;
+    }
 }
 
 .bk-list li .bk-left {
 	height: 400px;
 	-webkit-transform: rotate3d(0,1,0,-90deg);
 	transform: rotate3d(0,1,0,-90deg);
+
+	@media (min-width: 320px) and (max-width: 480px) {
+        height: 300px;
+    }
 }
 
 .bk-list li .bk-top {
@@ -272,6 +291,10 @@
 	transform-origin: 0 0;
 	-webkit-transform: rotate(90deg) translateY(-40px);
 	transform: rotate(90deg) translateY(-40px);
+
+	@media (min-width: 320px) and (max-width: 480px) {
+        width: 300px;
+    }
 }
 
 /* Individual style & artwork */
