@@ -40,6 +40,8 @@
     }
 
     &-body {
+        max-width: 1300px;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 5rem;
@@ -49,6 +51,7 @@
     &-first,
     &-second,
     &-third {
+        
         width: 100%;
         justify-self: center;
         display: grid;

@@ -1656,6 +1656,8 @@ body {
 }
 
 .section__testimonials-body {
+  max-width: 1300px;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
