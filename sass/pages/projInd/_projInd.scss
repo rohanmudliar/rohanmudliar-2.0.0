@@ -4,23 +4,29 @@
     
     &__header {
         background: linear-gradient(180deg, rgba(36, 36, 36, 1), black);
-        padding: 10rem 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
-        @media (min-width: 481px) and (max-width: 767px) {
-            grid-template-columns: 1fr;
-        }
+        &-wrapper {
+            max-width: $max-width;
+            margin: 0 auto;
+            padding: 10rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
-        @media (min-width: 320px) and (max-width: 480px) {
-            grid-template-columns: 1fr;
-            padding: 10rem 0 5rem 0;
+            @media (min-width: 481px) and (max-width: 767px) {
+                grid-template-columns: 1fr;
+            }
+
+            @media (min-width: 320px) and (max-width: 480px) {
+                grid-template-columns: 1fr;
+                padding: 10rem 0 5rem 0;
+            }
         }
 
         &-desp {
             padding-left: 8rem;
             width: 100%;
             align-self: center;
+            text-align: center;
 
             @media (min-width: 481px) and (max-width: 767px) {
                 padding-left: 0rem;
@@ -58,6 +64,7 @@
                 font-size: 1.8rem;
                 display: grid;
                 grid-template-rows: repeat(2, auto);
+                justify-content: center;
 
                 @media (min-width: 481px) and (max-width: 767px) {
                     justify-content: center;

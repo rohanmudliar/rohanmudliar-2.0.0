@@ -10,6 +10,46 @@
 </head>
 
 <body>
+
+    <div class="container" id="container">
+        <div class="boxes">
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Writing scirpt here so that there is will be no delay to load the preloader -->
+    <script>
+        window.addEventListener("load", function () {
+            $('.container').fadeOut();
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        });
+    </script>
+    <!-------------------------------------------------------->
+
+
     <div id="individualNavBar" class="individualNavBar">
         <div class="individualNavBar__logo-box">
             <a href="../../index.html"><img src="../../images/logo.png" class="individualNavBar__logo" alt="logo"></a>
@@ -28,22 +68,24 @@
         <section class="individualProject">
 
             <div class="individualProject__header">
-                <div class="individualProject__header-desp">
-                    <div class="individualProject__header-desp--title">
-                        <h1 dataEval="title"></h1>
-                    </div>
-                    <div class="individualProject__header-desp--metaData">
-                        <div class="individualProject__header-desp--metaData---duration">
-                            <p>Last Updated: </p>
-                            <p dataEval="lastUpdated"></p>
+                <div class="individualProject__header-wrapper">
+                    <div class="individualProject__header-desp">
+                        <div class="individualProject__header-desp--title">
+                            <h1 dataEval="title"></h1>
                         </div>
-                        <div class="individualProject__header-desp--metaData---sourceLink">
-                            <p>Source Link:</p>
-                            <p dataEval="sourceLink"></p>
+                        <div class="individualProject__header-desp--metaData">
+                            <div class="individualProject__header-desp--metaData---duration">
+                                <p>Last Updated: </p>
+                                <p dataEval="lastUpdated"></p>
+                            </div>
+                            <div class="individualProject__header-desp--metaData---sourceLink">
+                                <p>Source Link:</p>
+                                <p dataEval="sourceLink"></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="individualProject__header-image" dataEval="imgSrc">
+                    <div class="individualProject__header-image" dataEval="imgSrc">
+                    </div>
                 </div>
             </div>
 
@@ -54,10 +96,9 @@
     </main>
     <footer>Handcrafted with <span style="color: rgb(251, 82, 110)">❤</span> by yours truly.</footer>
 
+    <script src="../../scripts/vendors/jquery-min.js"></script>
     <script src="../../scripts/resources/indexScripts/individualPagesNavBar.js"></script>
-    <script src="../../scripts/resources/projects/musicPlayer.js"></script>
-    <script src="../../scripts/resources/projects/chromeExtension.js"></script>
-    <script src="../../scripts/resources/projects/pokeGame.js"></script>
+    <script src="../../scripts/resources/projects/projectData.js"></script>
     <script src="../../scripts/resources/projects/dataEval.js"></script>
 
 </body>

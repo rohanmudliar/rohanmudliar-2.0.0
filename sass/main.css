@@ -2550,6 +2550,11 @@ footer {
 .individualProject__header {
   background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(black));
   background: linear-gradient(180deg, #242424, black);
+}
+
+.individualProject__header-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
   padding: 10rem 0;
   display: -ms-grid;
   display: grid;
@@ -2558,14 +2563,14 @@ footer {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .individualProject__header {
+  .individualProject__header-wrapper {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .individualProject__header {
+  .individualProject__header-wrapper {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding: 10rem 0 5rem 0;
@@ -2578,6 +2583,7 @@ footer {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  text-align: center;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -2624,6 +2630,9 @@ footer {
   display: grid;
   -ms-grid-rows: (auto)[2];
       grid-template-rows: repeat(2, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {

@@ -1,4 +1,4 @@
-var projects = document.querySelectorAll('#section__project > a > div')
+var projects = document.querySelectorAll('#section__project button');
 
 $(window).on('beforeunload', function () {
     $('body').hide();
@@ -37,12 +37,8 @@ $('.js--wp-3').waypoint(() => {
 
 projects.forEach(project => {
     project.addEventListener('click', (e) => {
-        if (e.currentTarget.className.split('-')[1] == 'first')
-            window.localStorage.setItem('currentProject', 'musicPlayer');
-        else if (e.currentTarget.className.split('-')[1] == 'second')
-            window.localStorage.setItem('currentProject', 'chromeExtension');
-        else if (e.currentTarget.className.split('-')[1] == 'third')
-            window.localStorage.setItem('currentProject', 'pokeGame');
+        var currentProjectName = e.currentTarget.getAttribute('dataName');
+        window.localStorage.setItem('currentProject', `${currentProjectName}`);
     })
 });
 

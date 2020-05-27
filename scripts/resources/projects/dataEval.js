@@ -1,8 +1,17 @@
+$(window).on('beforeunload', function () {
+    console.log('here')
+    $('body').hide();
+    $(window).scrollTop(0, 0);
+});
+
 const dataEval = document.querySelectorAll('[dataEval]');
 let currentProject = window.localStorage.getItem('currentProject');
 
+let updatedObjName = currentProject.toLowerCase().split(' ').join("");
+
 if (currentProject == null)
-    currentProject = musicPlayer;
+    updatedObjName = 'musicplayer';
+
 dataEval.forEach((data) => {
-    data.innerHTML = (eval(currentProject))[data.getAttribute('dataEval')]
+    data.innerHTML = projectData[`${updatedObjName}`][data.getAttribute('dataEval')];
 });
