@@ -41,6 +41,8 @@
     }
 
     &-body {
+        max-width: $max-width;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
         gap: 5rem;

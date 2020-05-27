@@ -3,6 +3,8 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     background: url('../images/bg_canvas-dark.jpg');
     color: $color-white;
+    // max-width: 1300px;
+    // margin: 0 auto;
 
     &-heading {
         font-size: 3.5rem;

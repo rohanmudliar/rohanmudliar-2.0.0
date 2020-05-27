@@ -23,6 +23,8 @@
     gap: 7rem;
     justify-content: center;
     color: $color-black;
+    max-width: $max-width;
+    margin: 0 auto;
 
     @media (min-width: 768px) and (max-width: 1024px) {
         gap: 5rem;
