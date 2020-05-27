@@ -1322,35 +1322,84 @@ body {
   color: inherit;
 }
 
-.section__project-first {
-  margin: 5rem 0 0 0;
+.section__project-blockFirst {
   background-color: #7d5fff;
 }
 
+.section__project-blockFirst--btnContainer button {
+  background-color: #542cff;
+}
+
+.section__project-blockSecond {
+  background-color: #F79F1F;
+}
+
+.section__project-blockSecond--btnContainer button {
+  background-color: #db8508;
+}
+
+.section__project-blockThird {
+  background-color: #000000;
+  color: #f3f3f3;
+}
+
+.section__project-blockThird--btnContainer button {
+  background-color: #1a1a1a;
+}
+
+.section__project-blockFirst,
+.section__project-blockSecond,
+.section__project-blockThird {
+  width: 100%;
+  height: 100%;
+  margin: 5rem 0;
+}
+
 @media (min-width: 481px) and (max-width: 767px) {
-  .section__project-first {
-    margin: 4rem 0 0 0;
+  .section__project-blockFirst,
+  .section__project-blockSecond,
+  .section__project-blockThird {
+    margin: 4rem 0;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .section__project-first {
-    margin: 3rem 0 0 0;
+  .section__project-blockFirst,
+  .section__project-blockSecond,
+  .section__project-blockThird {
+    margin: 3rem 0;
   }
 }
 
-.section__project-second {
-  background-color: #F79F1F;
+.section__project-blockFirst--btnContainer,
+.section__project-blockSecond--btnContainer,
+.section__project-blockThird--btnContainer {
+  text-align: center;
 }
 
-.section__project-third {
-  background-color: #000000;
+.section__project-blockFirst--btnContainer button,
+.section__project-blockSecond--btnContainer button,
+.section__project-blockThird--btnContainer button {
   color: #f3f3f3;
+  text-transform: uppercase;
+  border: none;
+  padding: 1.5rem 3.5rem;
+  font-size: 1.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: .7rem;
+}
+
+.section__project-blockFirst--btnContainer button:hover,
+.section__project-blockSecond--btnContainer button:hover,
+.section__project-blockThird--btnContainer button:hover {
+  cursor: pointer;
 }
 
 .section__project-first,
 .section__project-second,
 .section__project-third {
+  max-width: 1300px;
+  margin: 0 auto;
   padding: 5rem 0;
   display: -ms-grid;
   display: grid;
