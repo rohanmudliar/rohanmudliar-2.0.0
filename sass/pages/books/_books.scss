@@ -40,7 +40,6 @@
         width: 100%;
         text-align: center;
     }
-
 }
 
 .booksSection  .bk-list {
@@ -59,24 +58,12 @@
 	z-index: 1;
 	-webkit-perspective: 1800px;
 	perspective: 1800px;
-
-	// @media (min-width: 320px) and (max-width: 480px) {
-    //     width: 200px;
-    // }
 }
 
 .booksSection .bk-info {
 	position: relative;
     margin-top: 320px;
     text-align: center;
-
-    // @media (min-width: 481px) and (max-width: 767px) {
-    //     margin-top: 420px;
-    // }
-
-    // @media (min-width: 320px) and (max-width: 480px) {
-    //     margin-top: 320px;
-    // }
 }
 
 .booksSection  .bk-info button {
@@ -114,10 +101,6 @@
 	transform-style: preserve-3d;
 	-webkit-transition: -webkit-transform .5s;
 	transition: transform .5s;
-
-	@media (min-width: 320px) and (max-width: 480px) {
-        height: 300px;
-    }
 }
 
 // .bk-list li .bk-book:hover {
@@ -160,11 +143,6 @@
 .booksSection .bk-list li .bk-front > div {
 	width: 200px;
     height: 300px;
-
-	@media (min-width: 320px) and (max-width: 480px) {
-		width: 200px;
-        height: 300px;
-    }
 }
 
 .booksSection .bk-list li .bk-left,
@@ -203,20 +181,12 @@
 	transform: rotate3d(0,1,0,90deg) translate3d(0,0,295px);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-
-	@media (min-width: 320px) and (max-width: 480px) {
-        height: 290px;
-    }
 }
 
 .booksSection .bk-list li .bk-left {
 	height: 300px;
 	-webkit-transform: rotate3d(0,1,0,-90deg);
 	transform: rotate3d(0,1,0,-90deg);
-
-	@media (min-width: 320px) and (max-width: 480px) {
-        height: 300px;
-    }
 }
 
 .booksSection .bk-list li .bk-top {
@@ -295,10 +265,6 @@
 	transform-origin: 0 0;
 	-webkit-transform: rotate(90deg) translateY(-40px);
 	transform: rotate(90deg) translateY(-40px);
-
-	@media (min-width: 320px) and (max-width: 480px) {
-        width: 300px;
-    }
 }
 
 /* Individual style & artwork */
