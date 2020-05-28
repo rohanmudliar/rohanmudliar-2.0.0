@@ -106,8 +106,8 @@
 .section__project-first,
 .section__project-second,
 .section__project-third  {
-    max-width: $max-width;
-    margin:0 auto;
+    // max-width: $max-width;
+    // margin:0 auto;
     padding: 5rem 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));

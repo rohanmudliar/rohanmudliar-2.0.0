@@ -6,8 +6,8 @@
         background: linear-gradient(180deg, rgba(36, 36, 36, 1), black);
 
         &-wrapper {
-            max-width: $max-width;
-            margin: 0 auto;
+            // max-width: $max-width;
+            // margin: 0 auto;
             padding: 10rem 0;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

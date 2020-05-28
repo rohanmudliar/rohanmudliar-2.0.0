@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Books</title>
+
+    <link rel="stylesheet" href="../../sass/main.css">
+    <script src="/scripts/vendors/modernizr.custom.js"></script>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="boxes">
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Writing scirpt here so that there is will be no delay to load the preloader -->
+    <script>
+        window.addEventListener("load", function () {
+            $('.container').fadeOut();
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        });
+    </script>
+    <!-------------------------------------------------------->
+
+
+    <div id="individualNavBar" class="individualNavBar">
+        <div class="individualNavBar__logo-box">
+            <a href="../../index.html"><img src="../../images/logo.png" class="individualNavBar__logo" alt="logo"></a>
+        </div>
+        <nav>
+            <ul class="individualNavBar__links">
+                <li><a href="../../index.html">
+                        &#8249;
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="booksSection">
+            <div class="booksSection__heading">
+                <h1>My Bookshelf</h1>
+            </div>
+
+            <div class="booksSection__body">
+                <ul id="bk-list" class="bk-list">
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="DisplayBookData">
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>Handcrafted with <span style="color: rgb(251, 82, 110)">❤</span> by yours truly.</footer>
+
+    <script src="../../scripts/vendors/jquery-min.js"></script>
+    <script src="../../scripts/resources/indexScripts/individualPagesNavBar.js"></script>
+    <script src="../../scripts/resources/books/booksData.js"></script>
+    <script>
+        var Books = (function () {
+            var $books = $('#bk-list > li > div.bk-book');
+
+            function init() {
+                $books.each(function () {
+                    var $book = $(this),
+                        $parent = $book.parent(),
+                        $bookview = $parent.find('button.bk-bookview');
+
+                    $parent.find('button.bk-bookback').on('click', function () {
+                        $bookview.removeClass('bk-active');
+                        if ($book.data('flip')) {
+                            $book.data({ opened: false, flip: false }).removeClass('bk-viewback').addClass('bk-bookdefault');
+                        } else {
+                            $book.data({ opened: false, flip: true }).removeClass('bk-viewinside bk-bookdefault').addClass('bk-viewback');
+                        }
+                    });
+                });
+            }
+
+            return { init: init };
+        })();
+
+        Books.init();
+
+    </script>
+
+
+
+</body>
+
+</html>

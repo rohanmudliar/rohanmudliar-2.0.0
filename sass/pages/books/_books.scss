@@ -1,17 +1,19 @@
-.section__books {
-    padding: 7rem;
+.booksSection {
+    padding: 10rem 7rem;
     display: grid;
-    background-color: $color-white;
+    // background-color: $color-white;
+    background: url('../../../images/bg_canvas-dark.jpg');
 
     @media (min-width: 481px) and (max-width: 767px) {
-         padding: 8rem 7rem;
+         padding: 10rem 7rem;
     }
 
     @media (min-width: 320px) and (max-width: 480px) {
-        padding: 8rem 3rem;
+        padding: 10rem 3rem;
     }
 
-    &-heading {
+    &__heading {
+        color: $color-white;
         font-size: 3.5rem;
         display: grid;
         justify-content: center;
@@ -28,7 +30,7 @@
             background-color: $color-primary;
             text-align: center;
             height: 2px;
-            width: 100px;
+            width: 150px;
             margin: 1.5rem auto 0;
         }
     }
@@ -41,43 +43,43 @@
 
 }
 
-.bk-list {
+.booksSection  .bk-list {
 	// max-width: $max-width;
     // margin: 0 auto;
 	list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 7rem;
 }
 
-.bk-list li {
+.booksSection  .bk-list li {
 	position: relative;
-    width: 300px;
+    width: 200px;
     justify-self: center;
 	z-index: 1;
 	-webkit-perspective: 1800px;
 	perspective: 1800px;
 
-	@media (min-width: 320px) and (max-width: 480px) {
-        width: 200px;
-    }
+	// @media (min-width: 320px) and (max-width: 480px) {
+    //     width: 200px;
+    // }
 }
 
-.bk-info {
+.booksSection .bk-info {
 	position: relative;
-    margin-top: 440px;
+    margin-top: 320px;
     text-align: center;
 
-    @media (min-width: 481px) and (max-width: 767px) {
-        margin-top: 420px;
-    }
+    // @media (min-width: 481px) and (max-width: 767px) {
+    //     margin-top: 420px;
+    // }
 
-    @media (min-width: 320px) and (max-width: 480px) {
-        margin-top: 320px;
-    }
+    // @media (min-width: 320px) and (max-width: 480px) {
+    //     margin-top: 320px;
+    // }
 }
 
-.bk-info button {
+.booksSection  .bk-info button {
 	background: $color-primary;
 	border: none;
 	color: #fff;
@@ -88,26 +90,26 @@
 	text-transform: uppercase;
 	cursor: pointer;
 	margin-right: 4px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+	box-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
-.bk-info button.bk-active,
-.bk-info button:active {
+.booksSection .bk-info button.bk-active,
+.booksSection .bk-info button:active {
 	box-shadow: 
-		0 1px 0 rgba(255, 255, 255, 0.8), 
-		inset 0 -1px 1px rgba(0,0,0,0.2);
+		0 1px 0 rgba(255, 255, 255, 0.993), 
+		inset 0 -1px 1px rgb(0, 0, 0);
 }
 
-.no-touch .bk-info button:hover,
-.bk-info button.bk-active {
+.booksSection .no-touch .bk-info button:hover,
+.booksSection .bk-info button.bk-active {
 	background: darken($color: $color-primary, $amount: 10)
 }
 
 
-.bk-list li .bk-book {
+.booksSection .bk-list li .bk-book {
 	position: absolute;
 	width: 100%;
-	height: 400px;
+	height: 300px;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	-webkit-transition: -webkit-transform .5s;
@@ -122,18 +124,18 @@
 //     cursor: pointer;
 // }
 
-.bk-list li .bk-book.bk-bookdefault:hover {
+.booksSection .bk-list li .bk-book.bk-bookdefault:hover {
 	-webkit-transform: rotate3d(0,1,0,35deg);
 	transform: rotate3d(0,1,0,35deg);
 }
 
-.bk-list li .bk-book > div,
-.bk-list li .bk-front > div {
+.booksSection .bk-list li .bk-book > div,
+.booksSection .bk-list li .bk-front > div {
 	display: block;
 	position: absolute;
 }
 
-.bk-list li .bk-front {
+.booksSection .bk-list li .bk-front {
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	-webkit-transform-origin: 0% 50%;
@@ -145,7 +147,7 @@
 	z-index: 10;
 }
 
-.bk-list li .bk-front > div {
+.booksSection .bk-list li .bk-front > div {
 	z-index: 1;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -153,11 +155,11 @@
 	transform-style: preserve-3d;
 }
 
-.bk-list li .bk-front,
-.bk-list li .bk-back,
-.bk-list li .bk-front > div {
-	width: 300px;
-	height: 400px;
+.booksSection .bk-list li .bk-front,
+.booksSection .bk-list li .bk-back,
+.booksSection .bk-list li .bk-front > div {
+	width: 200px;
+    height: 300px;
 
 	@media (min-width: 320px) and (max-width: 480px) {
 		width: 200px;
@@ -165,14 +167,14 @@
     }
 }
 
-.bk-list li .bk-left,
-.bk-list li .bk-right {
+.booksSection .bk-list li .bk-left,
+.booksSection .bk-list li .bk-right {
 	width: 40px;
 	left: -20px;
 }
 
-.bk-list li .bk-top,
-.bk-list li .bk-bottom {
+.booksSection .bk-list li .bk-top,
+.booksSection .bk-list li .bk-bottom {
 	width: 295px;
 	height: 40px;
 	top: -15px;
@@ -180,10 +182,10 @@
 	backface-visibility: hidden;
 }
 
-.bk-list li .bk-back {
+.booksSection .bk-list li .bk-back {
 	-webkit-transform: rotate3d(0,1,0,-180deg) translate3d(0,0,20px);
 	transform: rotate3d(0,1,0,-180deg) translate3d(0,0,20px);
-	box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.857);
 	border-radius: 3px 0 0 3px;
 }
 
@@ -193,8 +195,8 @@
 	transform: rotate3d(0,1,0,-179deg);
 }
 
-.bk-list li .bk-right {
-	height: 390px;
+.booksSection .bk-list li .bk-right {
+	height: 290px;
 	top: 5px;
 	-webkit-transform: rotate3d(0,1,0,90deg) translate3d(0,0,295px);
 	-moz-transform: rotate3d(0,1,0,90deg) translate3d(0,0,295px);
@@ -207,8 +209,8 @@
     }
 }
 
-.bk-list li .bk-left {
-	height: 400px;
+.booksSection .bk-list li .bk-left {
+	height: 300px;
 	-webkit-transform: rotate3d(0,1,0,-90deg);
 	transform: rotate3d(0,1,0,-90deg);
 
@@ -217,49 +219,49 @@
     }
 }
 
-.bk-list li .bk-top {
+.booksSection .bk-list li .bk-top {
 	-webkit-transform: rotate3d(1,0,0,90deg);
 	transform: rotate3d(1,0,0,90deg);
 }
 
-.bk-list li .bk-bottom {
+.booksSection .bk-list li .bk-bottom {
 	-webkit-transform: rotate3d(1,0,0,-90deg) translate3d(0,0,390px);
 	transform: rotate3d(1,0,0,-90deg) translate3d(0,0,390px);
 }
 
 /* Transform classes */
 
-.bk-list li .bk-viewinside .bk-front {
+.booksSection .bk-list li .bk-viewinside .bk-front {
 	-webkit-transform: translate3d(0,0,20px) rotate3d(0,1,0,-160deg);
 	transform: translate3d(0,0,20px) rotate3d(0,1,0,-160deg);
 }
 
-.bk-list li .bk-book.bk-viewinside {
+.booksSection .bk-list li .bk-book.bk-viewinside {
 	-webkit-transform: translate3d(0,0,150px) rotate3d(0,1,0,0deg);
 	transform: translate3d(0,0,150px) rotate3d(0,1,0,0deg);
 }
 
-.bk-list li .bk-book.bk-viewback {
+.booksSection .bk-list li .bk-book.bk-viewback {
 	-webkit-transform: translate3d(0,0,0px) rotate3d(0,1,0,180deg);
 	transform: translate3d(0,0,0px) rotate3d(0,1,0,180deg);
 }
 
 /* Main colors and content */
 
-.bk-list li .bk-page,
-.bk-list li .bk-right,
-.bk-list li .bk-top,
-.bk-list li .bk-bottom {
+.booksSection .bk-list li .bk-page,
+.booksSection .bk-list li .bk-right,
+.booksSection .bk-list li .bk-top,
+.booksSection .bk-list li .bk-bottom {
 	background-color: #fff;
 }
 
-.bk-list li .bk-front > div {
+.booksSection .bk-list li .bk-front > div {
 	border-radius: 0 3px 3px 0;
 	box-shadow: 
-		inset 4px 0 10px rgba(0, 0, 0, 0.1);
+		inset 4px 0 10px rgba(0, 0, 0, 0.666);
 }
 
-.bk-list li .bk-front:after {
+.booksSection .bk-list li .bk-front:after {
 	content: '';
 	position: absolute;
 	top: 1px;
@@ -268,8 +270,8 @@
 	width: 1px;
 }
 
-.bk-list li .bk-cover:after,
-.bk-list li .bk-back:after {
+.booksSection .bk-list li .bk-cover:after,
+.booksSection .bk-list li .bk-back:after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -280,13 +282,13 @@
 	box-shadow: 1px 0 3px rgba(255, 255, 255, 0.1);
 }
 
-.bk-list li .bk-back:after {
+.booksSection .bk-list li .bk-back:after {
 	left: auto;
 	right: 10px;
 }
 
-.bk-left h2 {
-	width: 400px;
+.booksSection .bk-left h2 {
+	width: 300px;
 	height: 40px;
 	-webkit-transform-origin: 0 0;
 	-moz-transform-origin: 0 0;
@@ -301,22 +303,14 @@
 
 /* Individual style & artwork */
 
-/* Book 1 */
-.book-1 .bk-front > div,
-.book-1 .bk-back,
-.book-1 .bk-left,
-.book-1 .bk-front:after {
-	background-color: #0E6E90;
-}
-
-.book-1 .bk-left h2 span:first-child {
+.booksSection .bk-left h2 span:first-child {
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 13px;
 	padding-right: 20px;
 }
 
-.book-1 .bk-left h2 {
+.booksSection .bk-left h2 {
 	color: #fff;
 	font-size: 15px;
 	line-height: 40px;
@@ -324,7 +318,7 @@
 	text-align: right;
 }
 
-.book-1 .bk-back p {
+.booksSection .bk-back p {
 	color: #fff;
 	font-size: 13px;
 	padding: 40px;
@@ -332,80 +326,24 @@
 	font-weight: 700;
 }
 
-/* Book 2 */
-
-.book-2 .bk-front > div,
-.book-2 .bk-back,
-.book-2 .bk-left,
-.book-2 .bk-front:after {
-	background-color: #37BFB3;
-}
-
-.book-2 .bk-left h2 {
-	color: #fff;
-	font-weight: 400;
-}
-
-.book-2 .bk-left h2 {
-	font-size: 20px;
-	line-height: 40px;
-	padding-right: 10px;
-	text-align: right;
-}
-
-.book-2 .bk-back p {
-	color: red;
-	font-size: 13px;
-	padding: 40px;
-	text-align: center;
-}
-
-/* Book 3 */
-
-.book-3 .bk-front > div,
-.book-3 .bk-back,
-.book-3 .bk-left,
-.book-3 .bk-front:after {
-	background-color: #EA4520;
-}
-
-.book-3 .bk-left h2 span:first-child {
-	text-transform: uppercase;
-	font-weight: 400;
-	font-size: 13px;
-	padding-right: 20px;
-}
-
-.book-3 .bk-left h2 {
-	color: #fff;
-	font-size: 14px;
-	line-height: 40px;
-	text-align: center;
-}
-
-.book-3 .bk-back img {
-	width: 200px;
-	display: block;
-}
-
 /* Fallbacks */
 
-.no-csstransforms3d .bk-list li .bk-book > div,
-.no-csstransforms3d .bk-list li .bk-book .bk-cover-back {
+.booksSection .no-csstransforms3d .bk-list li .bk-book > div,
+.booksSection .no-csstransforms3d .bk-list li .bk-book .bk-cover-back {
 	display: none;
 }
 
-.no-csstransforms3d .bk-list li .bk-book > div.bk-front {
+.booksSection .no-csstransforms3d .bk-list li .bk-book > div.bk-front {
 	display: block;
 }
 
-.no-csstransforms3d .bk-info button,
-.no-js .bk-info button {
+.booksSection .no-csstransforms3d .bk-info button,
+.booksSection .no-js .bk-info button {
 	display: none;
 }
 
 
-.books__more-button {
+.booksSection .books__more-button {
     background-color: transparent;
     text-transform: uppercase;
     border: none;
@@ -416,5 +354,95 @@
 
     &:hover {
         cursor: pointer;
+    }
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* Modal Content */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+	width: 80%;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+		padding: 10px;
+        width: 95%;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.DisplayBookData {
+    text-align: center;
+    font-size: 1.5rem;
+
+    &__imgContainer {
+        width: 10%;
+		margin: 0 auto;
+        
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__data {
+
+        &-title {
+            font-size: 2rem;
+            padding: 1rem;
+            font-weight: bold;
+        }
+
+        &-author {
+            font-size: 1.8rem;
+            padding: .5rem;
+            font-weight: bold;
+        }
+
+        &-desp {
+            text-align: left;
+            padding: .5rem;
+            line-height: 2rem;
+			text-align: left;
+			
+			 @media (min-width: 320px) and (max-width: 480px) {
+				line-height: 1.7rem;
+    		}
+        }
     }
 }
