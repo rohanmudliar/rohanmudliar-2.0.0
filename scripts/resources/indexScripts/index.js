@@ -1,4 +1,5 @@
 var projects = document.querySelectorAll('#section__project button');
+var blogCards = document.querySelectorAll('.section__blogs-blogCard');
 
 $(window).on('beforeunload', function () {
     $('body').hide();
@@ -41,6 +42,13 @@ projects.forEach(project => {
         window.localStorage.setItem('currentProject', `${currentProjectName}`);
     })
 });
+
+blogCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+        var currentBlogId = card.getAttribute('blogId');
+        window.localStorage.setItem('currentBlogId', `${currentBlogId}`);
+    })
+})
 
 var Books = (function () {
     var $books = $('#bk-list > li > div.bk-book');
