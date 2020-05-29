@@ -104,11 +104,11 @@ booksData.forEach((data, i) => {
                                 <div class="bk-cover-back"></div>
                                 <div class="bk-cover">
                                     <img style="width: 100%; height: 100%;"
-                                        src="/images/Books/${data.fontImgSrc}.jpg" alt="${data.bookName}">
+                                        src="../../images/Books/${data.fontImgSrc}.jpg" alt="${data.bookName}">
                                 </div>
                             </div>
                             <div class="bk-back">
-                                <img style="width: 100%; height: 100%;" src="/images/Books/${data.backImgSrc}.jpg"
+                                <img style="width: 100%; height: 100%;" src="../../images/Books/${data.backImgSrc}.jpg"
                                     alt="${data.bookName}">
                             </div>
                             <div class="bk-right"></div>

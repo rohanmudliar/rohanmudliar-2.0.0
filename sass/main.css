@@ -2810,7 +2810,7 @@ footer {
   padding: 10rem 7rem;
   display: -ms-grid;
   display: grid;
-  background: url("../../../images/bg_canvas-dark.jpg");
+  background: url("../images/bg_canvas-dark.jpg");
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
