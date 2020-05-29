@@ -1,6 +1,11 @@
 const individualNavBar = document.getElementById('individualNavBar');
 let prevScrollposInd = window.pageYOffset;
 
+$(window).on('beforeunload', function () {
+    $('body').hide();
+    $(window).scrollTop(0, 0);
+});
+
 window.onscroll = function () {
     let currentScrollPosInd = window.pageYOffset;
     if (prevScrollposInd > currentScrollPosInd) {

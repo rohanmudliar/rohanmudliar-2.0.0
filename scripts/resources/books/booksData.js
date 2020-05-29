@@ -1,8 +1,3 @@
-$(window).on('beforeunload', function () {
-    $('body').hide();
-    $(window).scrollTop(0, 0);
-});
-
 var booksData = [
     {
         "bookName": "All Rights Reserved For You",

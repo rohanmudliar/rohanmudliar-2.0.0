@@ -1,9 +1,3 @@
-$(window).on('beforeunload', function () {
-    console.log('here')
-    $('body').hide();
-    $(window).scrollTop(0, 0);
-});
-
 const dataEval = document.querySelectorAll('[dataEval]');
 let currentProject = window.localStorage.getItem('currentProject');
 
