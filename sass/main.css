@@ -1037,6 +1037,8 @@ body {
 .section__aboutMain {
   width: 100%;
   padding: 10rem 5rem;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1373,6 +1375,14 @@ body {
   }
 }
 
+.section__project-blockFirst .main,
+.section__project-blockSecond .main,
+.section__project-blockThird .main {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .section__project-blockFirst--btnContainer,
 .section__project-blockSecond--btnContainer,
 .section__project-blockThird--btnContainer {
@@ -1655,6 +1665,12 @@ body {
   margin: 1.5rem auto 0;
 }
 
+.section__testimonials .main {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .section__testimonials-body {
   display: -ms-grid;
   display: grid;
@@ -1799,6 +1815,12 @@ body {
   margin: 1.5rem auto 0;
 }
 
+.section__blogs .main {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .section__blogs-body {
   display: -ms-grid;
   display: grid;
@@ -1901,6 +1923,12 @@ body {
   margin: 1.5rem auto 0;
 }
 
+.section__books .main {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .section__books-more {
   margin-top: 5rem;
   width: 100%;
@@ -1908,19 +1936,17 @@ body {
 }
 
 .section__books .bk-list {
-  max-width: 1300px;
-  margin: 0 auto;
   list-style: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 7rem;
 }
 
 .section__books .bk-list li {
   position: relative;
-  width: 300px;
+  width: 250px;
   -ms-grid-column-align: center;
       justify-self: center;
   z-index: 1;
@@ -1936,13 +1962,13 @@ body {
 
 .section__books .bk-info {
   position: relative;
-  margin-top: 440px;
+  margin-top: 380px;
   text-align: center;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
   .section__books .bk-info {
-    margin-top: 420px;
+    margin-top: 380px;
   }
 }
 
@@ -1981,7 +2007,7 @@ body {
 .section__books .bk-list li .bk-book {
   position: absolute;
   width: 100%;
-  height: 400px;
+  height: 350px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: -webkit-transform .5s;
@@ -2032,8 +2058,8 @@ body {
 .section__books .bk-list li .bk-front,
 .section__books .bk-list li .bk-back,
 .section__books .bk-list li .bk-front > div {
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 350px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -2053,7 +2079,7 @@ body {
 
 .section__books .bk-list li .bk-top,
 .section__books .bk-list li .bk-bottom {
-  width: 295px;
+  width: 245px;
   height: 40px;
   top: -15px;
   -webkit-backface-visibility: hidden;
@@ -2075,7 +2101,7 @@ body {
 }
 
 .section__books .bk-list li .bk-right {
-  height: 390px;
+  height: 340px;
   top: 5px;
   -webkit-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 295px);
   transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 295px);
@@ -2090,7 +2116,7 @@ body {
 }
 
 .section__books .bk-list li .bk-left {
-  height: 400px;
+  height: 350px;
   -webkit-transform: rotate3d(0, 1, 0, -90deg);
   transform: rotate3d(0, 1, 0, -90deg);
 }
@@ -2169,7 +2195,7 @@ body {
 }
 
 .section__books .bk-left h2 {
-  width: 400px;
+  width: 350px;
   height: 40px;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
@@ -2544,6 +2570,12 @@ footer {
   background: linear-gradient(180deg, #242424, black);
 }
 
+.individualProject__header .main {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .individualProject__header-wrapper {
   padding: 10rem 0;
   display: -ms-grid;
@@ -2714,6 +2746,12 @@ footer {
   }
 }
 
+.individualProject__body .main {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .individualProject__body > p {
   margin-bottom: 3rem;
 }
@@ -2731,6 +2769,8 @@ footer {
 }
 
 .individualBlog {
+  max-width: 1300px;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
   padding: 10rem 0;
@@ -2763,6 +2803,8 @@ footer {
 
 .individualBlog__img img {
   height: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .individualBlog__updatedOn {
@@ -2855,6 +2897,12 @@ footer {
   height: 2px;
   width: 150px;
   margin: 1.5rem auto 0;
+}
+
+.booksSection__body {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .booksSection-more {
@@ -3155,6 +3203,7 @@ footer {
 
 /* Modal Content */
 .modal-content {
+  max-width: 1300px;
   position: absolute;
   top: 50%;
   left: 50%;

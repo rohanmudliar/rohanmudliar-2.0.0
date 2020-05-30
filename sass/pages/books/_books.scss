@@ -33,7 +33,13 @@
             width: 150px;
             margin: 1.5rem auto 0;
         }
-    }
+	}
+	
+	&__body {
+		max-width: $max-width;
+		width: 100%;
+		margin: 0 auto;
+	}
 
     &-more {
         margin-top: 5rem;
@@ -42,7 +48,7 @@
     }
 }
 
-.booksSection  .bk-list {
+.booksSection .bk-list {
 	// max-width: $max-width;
     // margin: 0 auto;
 	list-style: none;
@@ -51,7 +57,7 @@
     gap: 7rem;
 }
 
-.booksSection  .bk-list li {
+.booksSection .bk-list li {
 	position: relative;
     width: 200px;
     justify-self: center;
@@ -66,7 +72,7 @@
     text-align: center;
 }
 
-.booksSection  .bk-info button {
+.booksSection .bk-info button {
 	background: $color-primary;
 	border: none;
 	color: #fff;
@@ -341,6 +347,7 @@
 
 /* Modal Content */
 .modal-content {
+	max-width: $max-width;
     position: absolute;
     top: 50%;
     left: 50%;

@@ -5,9 +5,13 @@
     &__header {
         background: linear-gradient(180deg, rgba(36, 36, 36, 1), black);
 
+        & .main {
+            max-width: $max-width;
+            margin: 0 auto;
+            width: 100%;
+        }
+
         &-wrapper {
-            // max-width: $max-width;
-            // margin: 0 auto;
             padding: 10rem 0;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -133,6 +137,12 @@
             width: 90%;
             margin-top: 4rem;
             padding-left: 3rem;
+        }
+
+        & .main {
+            max-width: $max-width;
+            margin: 0 auto;
+            width: 100%;
         }
 
         & > p {
