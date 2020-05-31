@@ -542,14 +542,14 @@
                     don't hesitate to contact me using the below form.
                 </div>
                 <div class="section__contact-bodyForm">
-                    <form action="">
-                        <input type="text" placeholder="Name" autocomplete="off" required>
-                        <input type="email" placeholder="Email" autocomplete="off" required>
-                        <input type="text" placeholder="Subject" autocomplete="off" required>
-                        <textarea class="contactTextArea" name="mytextarea" placeholder="Message" maxlength="300"
-                            required></textarea>
-                        <input type="submit" value="Send">
-                    </form>
+                    <!-- <form action="#"> -->
+                    <input id="name" type="text" placeholder="Name" autocomplete="off" required>
+                    <input id="email" type="email" placeholder="Email" autocomplete="off" required>
+                    <input id="subject" type="text" placeholder="Subject" autocomplete="off" required>
+                    <textarea id="textarea" class="contactTextArea" placeholder="Message" maxlength="300"
+                        required></textarea>
+                    <input id="submit" type="submit" value="Send">
+                    <!-- </form> -->
                 </div>
             </div>
 
@@ -561,6 +561,10 @@
 
 
     <footer>Handcrafted with <span style="color: rgb(251, 82, 110)">❤</span> by yours truly.</footer>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
 
     <script src="./scripts/vendors/jquery-min.js"></script>
     <script src="./scripts/vendors/jquery.waypoints.min.js"></script>
